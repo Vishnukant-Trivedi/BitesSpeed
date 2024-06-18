@@ -32,20 +32,23 @@ import {
     @Column({
       type: DataType.STRING(10),
       field: Contact.CONTACT_PHONE_NUMBER,
+      allowNull: true
     })
-    phoneNumber!: string;
+    phoneNumber?: string;
   
     @Column({
-      type: DataType.STRING(10),
+      type: DataType.STRING(100),
       field: Contact.CONTACT_EMAIL,
+      allowNull: true,
     })
-    email!: string;
+    email?: string;
   
     @Column({
       type: DataType.INTEGER,
       field: Contact.CONTACT_LINKED_ID,
+      allowNull: true,
     })
-    linkedId!: number;
+    linkedId?: number;
   
     @Column({
       type: DataType.STRING(10),
